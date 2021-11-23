@@ -1,5 +1,5 @@
 with payments as (
     select *
-    from analytics.stripe.payment
+    from {{source('stripe', 'payment')}}
 )
 select * from payments
